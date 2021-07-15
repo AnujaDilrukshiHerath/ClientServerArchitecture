@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://server/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://server/">
+
+<xs:element name="Exception" type="tns:Exception"/>
+
+<xs:element name="addStringOnServer" type="tns:addStringOnServer"/>
+
+<xs:element name="addStringOnServerResponse" type="tns:addStringOnServerResponse"/>
+
+<xs:element name="getAllStringsShorterThan" type="tns:getAllStringsShorterThan"/>
+
+<xs:element name="getAllStringsShorterThanResponse" type="tns:getAllStringsShorterThanResponse"/>
+
+<xs:element name="getLongestString" type="tns:getLongestString"/>
+
+<xs:element name="getLongestStringResponse" type="tns:getLongestStringResponse"/>
+
+<xs:element name="hello" type="tns:hello"/>
+
+<xs:element name="helloResponse" type="tns:helloResponse"/>
+
+<xs:element name="safeSum" type="tns:safeSum"/>
+
+<xs:element name="safeSumResponse" type="tns:safeSumResponse"/>
+
+<xs:element name="sum" type="tns:sum"/>
+
+<xs:element name="sumResponse" type="tns:sumResponse"/>
+
+<xs:element name="testConnection" type="tns:testConnection"/>
+
+<xs:element name="testConnectionResponse" type="tns:testConnectionResponse"/>
+
+<xs:complexType name="addStringOnServer">
+<xs:sequence>
+<xs:element name="a" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addStringOnServerResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="Exception">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="safeSum">
+<xs:sequence>
+<xs:element name="d1" type="xs:double" minOccurs="0"/>
+<xs:element name="d2" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="safeSumResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getLongestString">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getLongestStringResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="testConnection">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="testConnectionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sum">
+<xs:sequence>
+<xs:element name="d1" type="xs:double" minOccurs="0"/>
+<xs:element name="d2" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sumResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllStringsShorterThan">
+<xs:sequence>
+<xs:element name="c" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllStringsShorterThanResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
